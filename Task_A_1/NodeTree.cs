@@ -11,7 +11,7 @@ namespace Task_A_1
 
         public static void PrintTreeToDepth(NodeTree nodeTree)
         {
-            if(nodeTree == null)
+            if (nodeTree == null)
             {
                 return;
             }
@@ -24,7 +24,7 @@ namespace Task_A_1
 
         public static void PrintTreeToWidth(NodeTree nodeTree)
         {
-            if(nodeTree == null)
+            if (nodeTree == null)
             {
                 return;
             }
@@ -32,17 +32,17 @@ namespace Task_A_1
             Queue<NodeTree> nodesQueue = new Queue<NodeTree>();
             nodesQueue.Enqueue(nodeTree);
 
-            while(nodesQueue.Count > 0)
+            while (nodesQueue.Count > 0)
             {
                 NodeTree node = nodesQueue.Dequeue();
 
                 System.Console.Write($"{node.Data} ");
 
-                if(node.Left != null)
+                if (node.Left != null)
                 {
                     nodesQueue.Enqueue(node.Left);
                 }
-                if(node.Rigth != null)
+                if (node.Rigth != null)
                 {
                     nodesQueue.Enqueue(node.Rigth);
                 }
@@ -57,9 +57,9 @@ namespace Task_A_1
                 return;
             }
 
-            if(node.Data < Data)
+            if (node.Data < Data)
             {
-                if(Left == null)
+                if (Left == null)
                 {
                     Left = node;
                 }
@@ -69,9 +69,9 @@ namespace Task_A_1
                 }
             }
 
-            if(node.Data > Data)
+            if (node.Data > Data)
             {
-                if(Rigth == null)
+                if (Rigth == null)
                 {
                     Rigth = node;
                 }
