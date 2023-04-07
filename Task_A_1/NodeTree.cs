@@ -9,17 +9,27 @@ namespace Task_A_1
         public NodeTree Left { get; set; }
         public NodeTree Rigth { get; set; }
 
-        public static void PrintTreeToDepth(NodeTree nodeTree)
+        public NodeTree()
+        {
+
+        }
+
+        public NodeTree(int data)
+        {
+            Data = data;
+        }
+
+        public static void PrintTreeToDepth(NodeTree nodeTree, string side = null)
         {
             if (nodeTree == null)
             {
                 return;
             }
 
-            System.Console.Write($"{nodeTree.Data} ");
+            System.Console.Write($"{nodeTree.Data} {side ?? string.Empty} ");
 
-            PrintTreeToDepth(nodeTree.Left);
-            PrintTreeToDepth(nodeTree.Rigth);
+            PrintTreeToDepth(nodeTree.Left, "Left");
+            PrintTreeToDepth(nodeTree.Rigth, "Rigth");
         }
 
         public static void PrintTreeToWidth(NodeTree nodeTree)

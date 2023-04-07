@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 namespace Task_A_1
 {
@@ -43,6 +42,13 @@ namespace Task_A_1
                     }
                 }
             };
+
+            NodeTree.PrintTreeToDepth(node);
+            Console.WriteLine();
+
+            node.PutNode(new NodeTree(9));
+            node.PutNode(new NodeTree(0));
+            node.PutNode(new NodeTree(16));
 
             NodeTree.PrintTreeToDepth(node);
             Console.WriteLine();
